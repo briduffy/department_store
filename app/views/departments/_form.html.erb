@@ -1,21 +1,11 @@
-<html>
-  <head>
-    <% include ./partials/header %>
-  </head>
-  <body>
-    <header>
-      <% include ./partials/navbar %>
-    </header>
-    <div class="container">
-      <h1>Choose an option below.</h1>
-      <h3><%= @department.id ? 'Edit Department' : 'Add Department' %></h3>
-      <hr />
-      <%= form_for @department do |f| %>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
+<div class="container">
+  <h1>Choose an option below.</h1>
+  <h3><%= @department.id ? 'Edit Department' : 'Add Department' %></h3>
+  <hr />
+  <%= form_for @department do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
 
-        <%= f.submit %>
-      <% end %>
-    </div>
-  </body>
-</html>
+    <%= f.submit %>
+  <% end %>
+</div>
