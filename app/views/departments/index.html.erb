@@ -5,8 +5,8 @@
   <hr />
   <%= link_to 'Add Your Department', new_department_path(@department) %>
     <ul>
-      <% @departments.each do |item| %>
-        <li><%= link_to @departments.name, [@departments, item] %></li>
+      <% @departments.each do |department| %>
+        <li><%= link_to department.name, department_path(department) %></li>
       <% end %>
     </ul>
 </div>
