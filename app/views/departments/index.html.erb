@@ -1,12 +1,12 @@
 <div class="container">
   <h1>Welcome to the Superstore!</h1>
-    <p>Click the link below to add your department.</p>
+    <h3>Click the link below to add your department.</h3>
     <p>Follow along to add invintory to your department.</p>
   <hr />
   <%= link_to 'Add Your Department', new_department_path(@department) %>
     <ul>
       <% @departments.each do |department| %>
-        <li><%= link_to department.name, department_path(department) %></li>
+        <li><%= link_to department.name, department_path(department.id) %></li>
       <% end %>
     </ul>
 </div>
